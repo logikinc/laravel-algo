@@ -1,0 +1,54 @@
+{
+    "name": "logikinc/laravel-algo",
+    "description": "",
+    "keywords": [
+        "logikinc",
+        "laravel-algo"
+    ],
+    "homepage": "https://github.com/logikinc/laravel-algo",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "LogikIO",
+            "email": "logikinc@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Logikinc\\LaravelAlgo\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Logikinc\\LaravelAlgo\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Logikinc\\LaravelAlgo\\LaravelAlgoServiceProvider"
+            ],
+            "aliases": {
+                "LaravelAlgo": "Logikinc\\LaravelAlgo\\LaravelAlgoFacade"
+            }
+        }
+    }
+}
